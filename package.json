@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server",
     "build": "next build",
     "start": "next start"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/pixeltag/NextJS#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-session": "^1.16.2",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
