@@ -33,9 +33,15 @@ class Story extends React.Component {
                         <span className="lead text-muted mr-4">{story.comments_count || 0} Comments</span>
                         <span className="lead text-muted mr-4">{story.points || 0} Points</span>
                         <span className="lead text-muted mr-4">{story.time_ago || 0}</span>
+                        {story.comments.map( comment => (
+                                <div className="blog-post" key={comment.id}>
+                                        <p className="blog-post-meta">{comment.time_ago} by <a href="#">{comment.user}</a></p>
+                                        <p>{comment.content}</p>
+                            </div>
+                            ))}
                         <p>
                             <a href="#" className="btn btn-primary my-2" onClick={() => {Router.back()}}>Go Back ..</a>
-                            {/* <a href="#" className="btn btn-secondary my-2">Secondary action</a> */}
+                            {/* <a href="#" classNameName="btn btn-secondary my-2">Secondary action</a> */}
                         </p>
                         </div>
                     </section>
