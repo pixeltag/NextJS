@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import Error from 'next/error';
+import StoriesList from '../components/StoriesList';
 
 class Index extends React.Component {
 
@@ -15,20 +16,18 @@ class Index extends React.Component {
     }
 
     render() {
-        
-        const { stories } = this.props; 
-        
+
+        const { stories } = this.props;
+
         if(stories.length === 0) {
                 return <Error statusCode={503} />
         }
-            
+
             return (
             <div>
                 <h2>Hackers News</h2>
                 <div className="hackers-news-wrapper">
-                    { stories.map(story => {
-                       return <h4 key={story.id}>{story.title}</h4>
-                    })}
+                    <StoriesList  stories={stories}  />
                 </div>
             </div>
         )
