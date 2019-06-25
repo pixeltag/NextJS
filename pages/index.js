@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import Error from 'next/error';
 import StoriesList from '../components/StoriesList';
+import Layout from '../components/Layout';
 
 class Index extends React.Component {
 
@@ -24,12 +25,11 @@ class Index extends React.Component {
         }
 
             return (
-            <div>
-                <h2>Hackers News</h2>
+            <Layout title="Hacker News" description="Hacker News Blog based on Next Js Frame work">
                 <div className="hackers-news-wrapper">
                     <StoriesList  stories={stories}  />
                 </div>
-            </div>
+            </Layout>
         )
     }
 }
