@@ -4,7 +4,7 @@
   "description": "Hacker News With Next Js",
   "main": "server.js",
   "scripts": {
-    "dev" : "next"
+    "dev": "next"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pixeltag/NextJS#readme",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
