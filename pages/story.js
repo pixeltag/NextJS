@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import Error from 'next/error';
 import Layout from '../components/Layout';
+import Router from 'next/router';
 
 class Story extends React.Component {
 
@@ -26,14 +27,15 @@ class Story extends React.Component {
         return (
             <Layout title={story.title}>
                     <section className="jumbotron text-center">
+
                         <div className="container">
                         <h1 className="jumbotron-heading">{story.title}</h1>
                         <span className="lead text-muted mr-4">{story.comments_count || 0} Comments</span>
                         <span className="lead text-muted mr-4">{story.points || 0} Points</span>
                         <span className="lead text-muted mr-4">{story.time_ago || 0}</span>
                         <p>
-                            <a href="#" className="btn btn-primary my-2">Main call to action</a>
-                            <a href="#" className="btn btn-secondary my-2">Secondary action</a>
+                            <a href="#" className="btn btn-primary my-2" onClick={() => {Router.back()}}>Go Back ..</a>
+                            {/* <a href="#" className="btn btn-secondary my-2">Secondary action</a> */}
                         </p>
                         </div>
                     </section>
